@@ -1,0 +1,35 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.PSF {
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    background-color: green;
+    /* text-align: center; */
+
+}
+
+.portfolio_slides {
+    /* position: relative;
+    float:left; */
+    background-color: khaki;
+    /* width: 250px; */
+    /* height: 250px; */
+    /* margin-right: 25px;  */
+    /* margin-top: 25px; */
+    
+}
