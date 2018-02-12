@@ -1,6 +1,8 @@
 /* Charles Goodwin || PennCodingBootCampJan18 */
 
+/*########################################################################################################*/
 /* BEGIN formatting applicable to elements regardless of page location */
+/*########################################################################################################*/
 .clearfix::after {
     content: “”;
     display: block;
@@ -10,10 +12,9 @@
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     color: #777777;
-    background-image: url("../images/crossword.png");
+    background-image: url("../images/backgrounds/crossword.png");
     background-repeat: repeat;
     min-height: 600px;
-    /* border: 2px black dotted; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,32 +47,25 @@ enter"'?  It's a rhetorichal question */
 #wrapper {
     position: relative;
     margin: auto; 
+    margin-bottom: 15px;
     max-width: 960px;
     display: block;
-    /* overflow: auto; */
+    overflow: auto;
     /* border: 2px darkgray dotted; */
-    /* background-color: chartreuse */
 }
+/*########################################################################################################*/
+/* END formatting applicable to elements regardless of page location */
+/*########################################################################################################*/
 
+/*########################################################################################################*/
 /* BEGIN formatting for header section and its contents */
-/* #page_header_pin_box { 
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-right: 30%;
-    margin-left: 30%;
-    height: 75px;
-}*/
+/*########################################################################################################*/
 
 #page_header {
     /* set to relative to use absolute positioning in inner elements */
     position: relative;
-    /* margin: auto; */
-    display: block; /* assures that header takes an entire line*/
-    /* resizes block to fit elements */
-    /* overflow: auto;  */
+    /* assures that header takes an entire line*/
+    display: block; 
     border-top: 2px #cccccc solid;
     border-bottom: 2px #cccccc solid;
     background-color: #ffffff;
@@ -80,10 +74,14 @@ enter"'?  It's a rhetorichal question */
 }
 
 #name_logo {
-    display: block; /* making default value explicit */
-    position: absolute; /*this positions element relative to header */
-    bottom: 0%; /* make sure element reaches bottom */
-    top: 0%;  /* pin to top left of container */
+    /* making default value explicit */
+    display: block; 
+    /*this positions element relative to page_header */
+    position: absolute; 
+    /* make sure element reaches bottom */
+    bottom: 0%;
+    /* pin to top left of container */ 
+    top: 0%;  
     left: 0%; 
     float: left;
     width: 30%;
@@ -99,7 +97,7 @@ enter"'?  It's a rhetorichal question */
 }
 
 .border_bottom {
-    border-bottom: 2px gray solid
+    border-bottom: 2px gray solid;
 }
 
 #page_top_menu {
@@ -109,9 +107,7 @@ enter"'?  It's a rhetorichal question */
     top: 0%;
     bottom: 0%;
     right: 0%;
-    width: 50%;
-    /* line-height: 2em; */
-    /* background-color: plum;  */
+    width: 68%;
 }
 
 #page_top_menu ul {
@@ -122,12 +118,15 @@ enter"'?  It's a rhetorichal question */
 }
 
 #page_top_menu li {
-    display: inline; /* makes menu horizontal */
-    list-style: none; /* no disks or dingbats */
-    padding-right: 10px; /* putting space around menu items */
+    /* makes menu horizontal */
+    display: inline; 
+    /* no disks or dingbats */
+    list-style: none; 
+    /* putting space around menu items */
+    padding-right: 10px; 
     padding-left: 10px; 
-    border-right: 1px gray solid; /* putting a "|" between menu items */
-    /* border: 2px lightskyblue solid; */
+    /* putting a "|" between menu items */
+    border-right: 1px gray solid; 
 }
 
 li.active {
@@ -140,7 +139,8 @@ li.active {
 }
 
 #page_top_menu li:last-child {
-     border-right: none; /* patch to eliminate unneeded line at right end of nav menue */
+/* patch to eliminate unneeded line at right end of nav menue */
+    border-right: none; 
 }
 
 #page_top_menu a{
@@ -155,20 +155,17 @@ li.active {
     display: block;
     overflow: auto;
     clear: left;
-    min-height: 1000px;
-    background-color: blue;
-    margin-bottom: 10%;
+    min-height: 500px;
+    /* margin-bottom: 10%; */
 }
 
-#main {
+.main {
     clear: left;
     float: left;
     background-color: #ffffff;
     margin-top: 5%;
     margin-bottom: 5%;
-    border: 2px blue solid;
     width: 650px;
-    min-height: 300px;
     border: .5px #62a7a4 solid;
     /* padding: 50px; */
     /* margin-left: 100px; */
@@ -187,22 +184,36 @@ li.active {
 }
 
 .main_inside {
-    margin: 0 5% 5% 5%;
+    /* margin: 0 5% 5% 5%; */
+    padding: 5%;
     /* border: 2px red solid; */
 } 
 
+/* .sidebar_holder {
+    position: relative;
+} */
+
 .sidebar {
     position: relative;
-    /* display: flex; */
-    margin-top: 5%;
+    margin: 5% auto 0 auto;
     padding-top: 1em;
-    float: right;
+    /* float: right; */
     width: 270px;
     height: 100%;
     overflow: auto;
     text-align: center;
     background-color: #ffffff;
     border: .5px #62a7a4 solid;
+}
+
+.sidebar_invisible {
+    float: left;
+    width: 0;
+    height: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 .aside_text {
@@ -212,19 +223,12 @@ li.active {
     text-align: justify;
 }
 
-.aside_text01 {
-    /* margin: 0 15px 15px 15px; */
-    width: 270px;
-    line-height: 1.2em;
-    font-size: 0.8em;
-    font-family: 'Times New Roman', Times, serif;
-    /* color: red; */
-}
+
 
 .portfolio_slide_frame {
     position: relative;
     display: grid;
-    width: 100%;
+    /* width: 100%; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 15px;
@@ -233,32 +237,29 @@ li.active {
 }
 
 .portfolio_slides {
-    /* position: relative;
-    float:left; */
-    background-color: #62a7a4;
-    /* overflow: hidden; */
-    /* max-height: 200px; */
-    /* width: 50%; */
-    /* width: 200px;; */
-    /* height: 100%; */
-    height: 200px;
-    /* margin-right: 25px;  */
-    /* margin-top: 25px; */
+    /* background-color: #62a7a4; */
+    height: 200px; 
+    max-width: 100%;
+    max-height: 100%;
+    border-bottom: 25px white solid;
 }
 
 .portfolio_image {
-    max-height: 200px;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    /* width: 100%; */
     overflow: hidden;
 }
 
 .portfolio_title {
     position: relative;
-    top: -50%;
+    top:0%;
+    margin-top: 10px;
     left: 0%;
+    color: #62a7a4;
     /* max-width: 70%;*/
     /* z-index: 99; */
-    background-color: #62a7a4;
+    /* background-color: #62a7a4; */
 }
 
 .form_text {
@@ -304,10 +305,15 @@ label {
     margin-top: 10px;
     width: 25%;
 }
+/*########################################################################################################*/
 /* END formatting for MIDDLE section and its contents */
+/*########################################################################################################*/
 
+/*########################################################################################################*/
 /* BEGIN formatting for FOOTER section and its contents */
-#page-bottom {
+/*########################################################################################################*/
+#page_bottom {
+    display: block;
     position: relative;
     width: 100%;
     height: 70px;
@@ -315,22 +321,212 @@ label {
     font-size: 0.5em;
     text-align: center;
     line-height: 70px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     color: white;
     background-color: #666666;
     border-top: 5px #62a7a4 solid;
+    /* border: 1px red dashed; */
 }
+/*########################################################################################################*/
+/* END formatting for FOOTER section and its contents */
+/*########################################################################################################*/
 
-/* 
-Teal color (used for headings and backgrounds): #4aaaa5
-#62a7a4
+/*########################################################################################################*/
+/* BEGIN 769px - 959px || narrow screens but not as narrow as cellphones */
+/*########################################################################################################*/
 
-Regular font color (used for paragraphs and all text besides the headings): #777777
+@media screen and (max-width: 960px) and (min-width:769px) {
 
-Main header background color: #ffffff
+    .main {
+        display: block;
+        clear: both;
+        width: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border:none;
+    }
 
-Main header border color: #cccccc
+    .main_inside {
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+    }
 
-Main content background color: #ffffff
+    .mid_page {
+        position: relative;
+        display: block;
+        clear: left;
+        height: auto;
+    }
 
-Main content border color: #dddddd */
+    .sidebar_holder {
+        position: relative;
+    }
+
+    .sidebar {
+        position: relative;
+        float: left;
+        width: 45%;
+        margin: 0 0 0 0;
+    }
+
+    .sidebar:-child {
+        clear: left;
+        border:1px tomato dotted;
+    }
+
+    .sidebar:last-child {
+        float: right;
+    }
+
+    .sidebar_invisible {
+        width: 25%;
+        height: 2px;
+        border: none;
+        margin: 0;
+        background-color: transparent;
+    }
+
+    #page_bottom {
+        clear: left;
+        width: 100%;
+        display:block;
+        text-align: center;
+        /* background-color: yellowgreen; */
+    }
+  
+    /* .portfolio_slides {
+        background-color: transparent;
+        height: 267px;
+    } */
+
+    .portfolio_image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .portfolio_title {
+        position: relative;
+        top: 0%;
+        /* margin-bottom: 10px; */
+    }
+}
+/*########################################################################################################*/
+/* END 769px - 959px || narrow screens but not as narrow as cellphones */
+/*########################################################################################################*/
+
+/*########################################################################################################*/
+/* BEGIN <= 769px  || smartphones
+/*########################################################################################################*/
+
+@media screen and (max-width: 768px) {
+
+    .main {
+        border: none;
+        min-width: 0px;
+        width: 90%;
+        display: block;
+        clear: both;
+        width: inherit;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main_inside {
+        width: 80%;
+        margin: auto;
+        border: none;
+    }
+
+    #mid_page {
+        position: relative;
+        display: block;
+        clear: left;
+        height: auto;
+        width: 100%;
+    }
+
+    .portfolio_slide_frame {
+        position: relative;
+        display: grid;
+        width: 100%;
+        background-color: #fff;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+    }
+
+    .portfolio_slides {
+        background-color: transparent;
+        /* height: 267px; */
+        margin: 5px auto 5px auto;
+    }
+
+    /* .portfolio_image {
+        width: 200px;
+    } */
+
+    /* .portfolio_title {
+        position: relative;
+        top: -20%;
+        max-width: 50%;
+        margin: 10px auto 5px auto;
+        z-index: 99;
+        /* background-color: #62a7a4; */
+        /* background-color: transparent;
+        color: black;
+        text-shadow: white 1px 1px;
+        font-size: 1em;
+        text-align: center; */
+    /*} */
+
+    .portfolio_title {
+        position: relative;
+        top: 0%;
+        /* margin-bottom: 10px; */
+    }
+
+    .sidebar_holder {
+        position: relative;
+        display: block;
+        clear: left;
+    }
+
+    .sidebar {
+        clear: left;
+        /* float: left; */
+        width: 100%;
+        display: block;
+        /* margin: auto; */
+        border-left: none;
+        border-right: none;
+    }
+
+    .sidebar_invisible {
+        clear: left;
+        width: 0;
+        height: 0;
+        border: none;
+        margin: 1px;
+        background-color: transparent;
+    }
+
+    .sidebar:last-child {
+        float: right;
+    }
+
+    .aside_text {
+        margin: auto;
+        width: 80%;
+    }
+
+    #page_bottom {
+        clear: left;
+        width: 100%;
+        display:block;
+        text-align: center;
+    }
+}
+/*########################################################################################################*/
+/* END <= 769px  || smartphones
+/*########################################################################################################*/
